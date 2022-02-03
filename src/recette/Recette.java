@@ -29,12 +29,11 @@ public class Recette {
         return this.ingredients.get(position).getNom();
     }
     public String afficheRecette(){
-        for (Ingredient i : ingredients){
-            i.getNom();
+        String maRecette = this.nomRecette + ": \n";
+        for (int i = 0; i < this.getNbIngredients();i++){
+            maRecette +="-" +this.afficheIngredient(i);
         }
-        return this.nomRecette + " : " + for (Ingredient i : ingredients){
-            i.getNom();
-        } ;
+        return maRecette;
     }
 
 }
