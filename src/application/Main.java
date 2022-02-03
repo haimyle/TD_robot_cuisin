@@ -26,7 +26,7 @@ public class Main {
         }
 
         System.out.println("Nombre d'ingredients: "+recette1.getNbIngredients());
-        System.out.println(recette1.afficheIngredient(1));
+        System.out.println("Le premier ingredient: "+recette1.afficheIngredient(1));
         System.out.println(recette1.afficheRecette());
 
 

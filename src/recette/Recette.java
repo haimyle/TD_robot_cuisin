@@ -16,8 +16,8 @@ public class Recette {
     public void setNomRecette(String nomRecette) {
         this.nomRecette = nomRecette;
     }
-    public void ajouterIngredient(Ingredient nouveauIngrdient){
-        this.ingredients.add(nouveauIngrdient);
+    public void ajouterIngredient(Ingredient nouveauIngredient){
+        this.ingredients.add(nouveauIngredient);
     }
     public int getNbIngredients(){
         return this.ingredients.size();
@@ -26,10 +26,15 @@ public class Recette {
         this.ingredients.get(position).setQuantite(nouvelleQuantite);
     }
     public String afficheIngredient(int position){
-        return this.ingredients.get(position).toString();
+        return this.ingredients.get(position).getNom();
     }
     public String afficheRecette(){
-        return this.nomRecette + " : " + this.ingredients.toString();
+        for (Ingredient i : ingredients){
+            i.getNom();
+        }
+        return this.nomRecette + " : " + for (Ingredient i : ingredients){
+            i.getNom();
+        } ;
     }
 
 }
