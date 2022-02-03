@@ -3,6 +3,7 @@ package application;
 import  recette.Ingredient;
 import recette.Recette;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -26,7 +27,13 @@ public class Main {
         }
 
         System.out.println("Nombre d'ingredients: "+recette1.getNbIngredients());
-        System.out.println("Le premier ingredient: "+recette1.afficheIngredient(1));
+        System.out.println("Le premier ingredient: "+recette1.afficheIngredient(0));
+        System.out.println("Recette complete: "+ recette1.afficheRecette());
+
+        int multiplicateur = 5;
+        for (int i = 0; i< recette1.getNbIngredients();i++){
+            recette1.getIngredients(i).setQuantite(recette1.getIngredients(i).getQuantite()*multiplicateur);
+        }
         System.out.println(recette1.afficheRecette());
 
 

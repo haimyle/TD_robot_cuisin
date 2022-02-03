@@ -26,7 +26,7 @@ public class Recette {
         this.ingredients.get(position).setQuantite(nouvelleQuantite);
     }
     public String afficheIngredient(int position){
-        return this.ingredients.get(position).getNom();
+        return this.ingredients.get(position).getNom() + " " + this.ingredients.get(position).getQuantite()+ " " + this.ingredients.get(position).getUnite();
     }
     public String afficheRecette(){
         String maRecette = this.nomRecette + ": \n";
@@ -36,4 +36,7 @@ public class Recette {
         return maRecette;
     }
 
+    public Ingredient getIngredients(int position) {
+        return ingredients.get(position);
+    }
 }
